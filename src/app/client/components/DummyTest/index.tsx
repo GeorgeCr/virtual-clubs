@@ -4,8 +4,9 @@ import './styles.css';
 
 export default class DummyTest extends Component<DummyTestProps> {
     render() {
+        const { message } = this.props;
         return (
-            <div>Hello World!</div>
+        <div>{message}</div>
         )
     }
 }
