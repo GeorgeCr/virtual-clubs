@@ -23,7 +23,7 @@
     "experimentalDecorators": true
   },
   "include": [
-    "src"
+    "src", "__tests__/DummyTest"
   ],
   "exclude": [
     "src/app/server"
