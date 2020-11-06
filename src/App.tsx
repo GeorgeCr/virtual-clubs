@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import DummyTest from './app/client/components/DummyTest';
 import { connect } from 'react-redux';
-import { increment, decrement } from './app/client/redux/actions';
+import { increment, decrement, doThunk } from './app/client/redux/actions';
 
-class App extends Component<{counter: string, increment: any, decrement: any}> {
+class App extends Component<{counter: string, increment: any, decrement: any, doThunk: any}> {
 
   state = {
     data: {}
@@ -18,12 +18,13 @@ class App extends Component<{counter: string, increment: any, decrement: any}> {
 
   render() {
     const { data } : any = this.state;
-    const { counter, increment, decrement } = this.props;
+    const { counter, increment, decrement, doThunk } = this.props;
     return (
       <>
         <DummyTest message={data.message} />
         <button onClick={increment}>+</button>
         <button onClick={decrement}>-</button>
+        <button onClick={doThunk}>DO</button>
         Current Value: {counter}
       </>
     )
@@ -38,7 +39,8 @@ const mapStateToProps = (state: any) => {
 
 const mapDispatchToProps = {
   increment,
-  decrement
+  decrement,
+  doThunk
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
