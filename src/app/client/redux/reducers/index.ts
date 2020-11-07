@@ -2,7 +2,7 @@ import { Reducer } from "redux";
 
 const initialState = {
     counter: 1,
-    // text: ''
+    featuredClubs: []
 }
 
 export const testReducer: Reducer = (state = initialState, { type, payload }: any) => {
@@ -11,10 +11,10 @@ export const testReducer: Reducer = (state = initialState, { type, payload }: an
             return { counter: state.counter + 1 };
         case 'DECREMENT':
             return { counter: state.counter - 1 };
-        case 'DO_THUNK':
+        case 'FETCHED_FEATURED_CLUBS':
             return {
                 ...state,
-                text: payload
+                featuredClubs: payload
             }
         default:
             return initialState;

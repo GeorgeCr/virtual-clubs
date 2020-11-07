@@ -1,0 +1,22 @@
+.featuredClubsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.featuredClubsContainer .clubCardContainer {
+  margin-bottom: 10%;
+}
+
+.showMoreBtnContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10%;
+}
+
+.spinner-border {
+  margin-bottom: 5%;
+}
