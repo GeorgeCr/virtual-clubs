@@ -5,24 +5,7 @@ import { NavbarContainer } from "./app/client/components/NavbarContainer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Landing from "./app/client/components/Landing";
 
-class App extends Component<{
-  counter: string;
-  increment: any;
-  decrement: any;
-}> {
-  state = {
-    data: {},
-  };
-
-  async componentDidMount() {
-    const resp: any = await fetch("http://localhost:9000/").then((res) =>
-      res.json()
-    );
-    this.setState({
-      data: resp,
-    });
-  }
-
+class App extends Component {
   render() {
     return (
       <div className="app">
